@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet
+		version		= "1.0"
+		xmlns:xsl	= "http://www.w3.org/1999/XSL/Transform">
 
 	<!-- Travail à faire : Compléter les parties <a compléter> de 1 à 10 afin d'obtenir le résultat expliqué dans la vidéo du laboratoire -->
 	<!-- !!!!! Nous vous rendons attentif que vous n'avez PAS LE DROIT de modifier le reste du document, mais uniquement ces parties -->
 
-	</> <!-- ##### A compléter 1 -->
+	<xsl:output
+		method			= "html"
+		encoding		= "UTF-8"
+		doctype-public	= "-//W3c//DTD HTML 4.01//EN"
+		doctype-system	= "http://www.w3.org/TR/html4/strict.dtd"
+		indent 			= "yes"
+	/> <!-- ##### A compléter 1 -->
 
-	<> <!-- ##### A compléter 2 -->
+	<xsl:template name="choisir_generation"> <!-- ##### A compléter 2 -->
 
 		<html>
 
@@ -46,7 +54,7 @@
 
 					<div id="accordion">
 
-						<xsl:variable name="types" select="" /> <!-- ##### A compléter 3 : Ici, vous devez trouver l'expression XPath à mettre dans l'attribut select 
+						<xsl:variable name="types" select="distinct-values(//pokedex/pokemon/@type)" /> <!-- ##### A compléter 3 : Ici, vous devez trouver l'expression XPath à mettre dans l'attribut select
 					                                                       Le but est de récupérer les types de pokemon en parcourant tous les enfants <type> de tous les pokemons,
 					                                                       mais sans avoir de doublons à la fin, vous ne pouvez pas mettre explicitement ici les types que vous trouver dans le fichier XML
 
@@ -77,6 +85,9 @@
 								</xsl:attribute>
 
 								<!-- ##### A compléter 4 : Ici, vous devez faire appel au template lister_pokemon en lui passant le bon filtre en paramètre -->
+								<xsl:call-template name="lister_pokemon">
+									<xsl:with-param name=""></xsl:with-param>
+								</xsl:call-template>
 
 							</div>
 
@@ -110,7 +121,7 @@
 
 		</html>
 
-	<> <!-- Fin a compléter 2 -->
+	</xsl:template>> <!-- Fin a compléter 2 -->
 
 	<xsl:template name="lister_pokemon">
 
@@ -188,7 +199,7 @@
 			</> <!-- ##### A compléter 8 : Ici, vous devez étudier le dossier images et vous trouverez facilement l'objectif de ce que vous devez faire ici. Indice : Vous devez utiliser une ou plusieurs 	               fonctions de  XSLT-->
 
 				<!-- NB : La sources d'images utilisées provient de :  https://github.com/fanzeyi/pokemon.json    -->
-		</img>
+		</xsl:stylesheet>
 
 	</xsl:template>
 
