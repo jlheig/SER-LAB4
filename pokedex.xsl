@@ -119,7 +119,7 @@
 
 	<xsl:template name="lister_pokemon">
 
-		</> <!-- ##### A compléter 6 -->
+		<xsl:param name="filtre"/>
 
 		<div class="row">
 
