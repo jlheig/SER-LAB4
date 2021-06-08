@@ -78,7 +78,6 @@
 									<xsl:value-of select="." />
 								</xsl:attribute>
 
-								<!-- ##### A compléter 4 : Ici, vous devez faire appel au template lister_pokemon en lui passant le bon filtre en paramètre -->
 								<xsl:call-template name="lister_pokemon">
 									<xsl:with-param name="filtre" select="/pokedex/pokemon/type[text()=$type]/parent::pokemon" />
 								</xsl:call-template>
@@ -115,7 +114,7 @@
 
 		</html>
 
-	</xsl:template> <!-- Fin a compléter 2 -->
+	</xsl:template>
 
 	<xsl:template name="lister_pokemon">
 
@@ -125,7 +124,7 @@
 
 			<xsl:for-each select="$filtre">
 
-				</> <!-- ##### A compléter 7 : Vous devez trier les pokemons par la valeur numérique de leur ID -->
+				<xsl:sort order="ascending" select="id" data-type="number"/>
 				<xsl:apply-templates select="." />
 
 			</xsl:for-each>
