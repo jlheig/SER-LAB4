@@ -5,7 +5,13 @@
 	<!-- Travail à faire : Compléter les parties <a compléter> de 1 à 10 afin d'obtenir le résultat expliqué dans la vidéo du laboratoire -->
 	<!-- !!!!! Nous vous rendons attentif que vous n'avez PAS LE DROIT de modifier le reste du document, mais uniquement ces parties -->
 
-	</> <!-- ##### A compléter 1 -->
+	<xsl:output
+			method 			= "html"
+			encoding 		= "UTF-8"
+			doctype-public 	= "-//W3C//DTD HTML 4.01//EN"
+			doctype-system 	= "http://www.w3.org/TR/html4/strict.dtd"
+			indent 			= "yes"
+	/>
 
 	<> <!-- ##### A compléter 2 -->
 
@@ -188,7 +194,7 @@
 			</> <!-- ##### A compléter 8 : Ici, vous devez étudier le dossier images et vous trouverez facilement l'objectif de ce que vous devez faire ici. Indice : Vous devez utiliser une ou plusieurs 	               fonctions de  XSLT-->
 
 				<!-- NB : La sources d'images utilisées provient de :  https://github.com/fanzeyi/pokemon.json    -->
-		</img>
+		</xsl:stylesheet>
 
 	</xsl:template>
 
