@@ -52,7 +52,7 @@
 
 					<div id="accordion">
 
-						<xsl:variable name="types" select="distinct-values(/pokedex/pokemon/type)" /> 
+						<xsl:variable name="types" select="distinct-values(/pokedex/pokemon/type)" />
 
 						<xsl:for-each select="$types">
 
@@ -79,6 +79,9 @@
 								</xsl:attribute>
 
 								<!-- ##### A compléter 4 : Ici, vous devez faire appel au template lister_pokemon en lui passant le bon filtre en paramètre -->
+								<xsl:call-template name="lister_pokemon">
+									<xsl:with-param name="" select="" />
+								</xsl:call-template>
 
 							</div>
 
@@ -112,7 +115,7 @@
 
 		</html>
 
-	<> <!-- Fin a compléter 2 -->
+	</xsl:template> <!-- Fin a compléter 2 -->
 
 	<xsl:template name="lister_pokemon">
 
