@@ -188,17 +188,14 @@
 	<xsl:template match="id">
 
 		<img width="100%">
-
-			 	<!-- ##### A compléter 8 : Ici, vous devez étudier le dossier images et vous trouverez facilement l'objectif de ce que vous devez faire ici. Indice : Vous devez utiliser une ou plusieurs fonctions de  XSLT-->
 				<xsl:attribute name="src">
 					<xsl:value-of select="concat('/images/',format-number(.,'000'),'.png')" />
 				</xsl:attribute>
-				<!-- NB : La sources d'images utilisées provient de :  https://github.com/fanzeyi/pokemon.json    -->
 		</img>
 
 	</xsl:template>
 
-	<> <!-- ##### A compléter 9 -->
+	<xsl:template match="base">
 
 		<table class="table table-stripped">
 			
@@ -225,6 +222,6 @@
 
 		</table>
 
-	<> <!-- Fin à compléter 9 -->
+	</xsl:template>
 
 </xsl:stylesheet>
