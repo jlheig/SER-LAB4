@@ -80,7 +80,7 @@
 
 								<!-- ##### A compléter 4 : Ici, vous devez faire appel au template lister_pokemon en lui passant le bon filtre en paramètre -->
 								<xsl:call-template name="lister_pokemon">
-									<xsl:with-param name="" select="" />
+									<xsl:with-param name="filtre" select="/pokedex/pokemon/type[text()=$type]/parent::pokemon" />
 								</xsl:call-template>
 
 							</div>
