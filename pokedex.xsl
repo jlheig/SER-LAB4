@@ -52,7 +52,8 @@
 
 					<div id="accordion">
 
-						<xsl:variable name="types" select="distinct-values(/pokedex/pokemon/type)" />
+						<!--<xsl:variable name="types" select="distinct-values(/pokedex/pokemon/type)" />-->
+						<xsl:variable name="types" select="/pokedex/pokemon/type/text()[generate-id() = generate-id(/pokedex/pokemon/type/text())]" />
 
 						<xsl:for-each select="$types">
 
