@@ -13,7 +13,7 @@
 			indent 			= "yes"
 	/>
 
-	<> <!-- ##### A compléter 2 -->
+	<xsl:template match="/">
 
 		<html>
 
