@@ -13,6 +13,8 @@
 			indent 			= "yes"
 	/>
 
+	<xsl:key name="pokemonTypes" match="/pokedex/pokemon/type" use="text()"></xsl:key>
+
 	<xsl:template match="/">
 
 		<html>
@@ -52,8 +54,7 @@
 
 					<div id="accordion">
 
-						<!--<xsl:variable name="types" select="distinct-values(/pokedex/pokemon/type)" />-->
-						<xsl:variable name="types" select="/pokedex/pokemon/type/text()[generate-id() = generate-id(/pokedex/pokemon/type/text())]" />
+						<xsl:variable name="types" select="/pokedex/pokemon/type/text()[generate-id(..) = generate-id(key('pokemonTypes', .))]" />
 
 						<xsl:for-each select="$types">
 
