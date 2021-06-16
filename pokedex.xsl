@@ -190,7 +190,7 @@
 
 		<img width="100%">
 				<xsl:attribute name="src">
-					<xsl:value-of select="concat('/images/',format-number(.,'000'),'.png')" />
+					<xsl:value-of select="concat('images/',format-number(.,'000'),'.png')" />
 				</xsl:attribute>
 		</img>
 
